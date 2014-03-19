@@ -1,0 +1,4 @@
+diggy
+=====
+
+Mining utility
