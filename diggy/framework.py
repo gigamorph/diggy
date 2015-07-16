@@ -1,6 +1,6 @@
 import diggy.const
 
-class FrameworkGuesser(object):
+class Framework(object):
 
     d7_markers = [
         'Drupal 7'
@@ -12,7 +12,7 @@ class FrameworkGuesser(object):
 
     ## response: a response from requests module
     @classmethod
-    def guess_framework(cls, response):
+    def guess(cls, response):
         generator = response.headers.get('x-generator')
 
         if cls.match(generator, cls.d7_markers):
