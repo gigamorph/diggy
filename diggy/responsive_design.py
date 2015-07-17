@@ -2,6 +2,7 @@ import logging
 import re
 from urlparse import urljoin
 
+
 class ResponsiveDesign(object):
 
     def __init__(self, html_get):
@@ -26,8 +27,6 @@ class ResponsiveDesign(object):
             css_url = p.sub('', css_url)
             css_url = urljoin(base_url, css_url)
             
-            print 'C %s' % css_url
-
             if self.find_media_tag(css_url):
                 return True
         return False
